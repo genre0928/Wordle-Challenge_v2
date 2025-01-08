@@ -1,0 +1,25 @@
+header {
+  width: auto;
+  height: 500px;
+}
+
+.header__ad {
+  width: auto;
+  height: 300px;
+  border: 1px solid gray;
+}
+
+.header__navigators {
+  width: auto;
+  height: 200px;
+  border: 1px solid gray;
+}
+
+.header__ad__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  font-size: 150px;
+  font-weight: bold;
+}
