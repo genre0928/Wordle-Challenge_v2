@@ -5,8 +5,12 @@ const answer = "OLIVE";
 
 function typingKeyboard() {
   const handleKeydown = (e) => {
-    const key = e.key.toUpperCase();
-
+    let key;
+    if (e.type === "keydown") {
+      key = e.key.toUpperCase();
+    } else if (e.type === "click") {
+      key = e.target.dataset.key;
+    }
     const checkAnswer = () => {
       // 반복문으로 하나씩 돌려서 정답이랑 대조한 뒤 클래스값 추가하는걸로
       // 만약 모두 맞으면 정답 스택 쌓기
@@ -42,14 +46,23 @@ function typingKeyboard() {
       }
     };
 
-    if (attempt !== 0 && e.key === "Backspace") {
+    if (
+      (attempt !== 0 && e.key === "Backspace") ||
+      e.target.dataset.key === "Backspace"
+    ) {
       attempt--;
       document.querySelector(
         `.main__game-main__answer-boxes__box[data-index='${row}${attempt}']`
       ).innerText = "";
-    } else if (attempt === 5 && e.key === "Enter") {
+    } else if (
+      (attempt === 5 && e.key === "Enter") ||
+      e.target.dataset.key === "ENTER"
+    ) {
       checkAnswer();
-    } else if (attempt < 5 && e.keyCode >= 65 && e.keyCode <= 90) {
+    } else if (
+      (attempt < 5 && e.keyCode >= 65 && e.keyCode <= 90) ||
+      /^[A-Z]$/.test(e.target.dataset.key)
+    ) {
       document.querySelector(
         `.main__game-main__answer-boxes__box[data-index='${row}${attempt}']`
       ).innerText = key;
@@ -57,7 +70,7 @@ function typingKeyboard() {
     }
   };
   window.addEventListener("keydown", handleKeydown);
-  window.addEventListener("keyClick", handleKeydown);
+  window.addEventListener("click", handleKeydown);
 }
 
 typingKeyboard();
