@@ -1,0 +1,103 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.main__game-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  width: 1950px;
+  height: auto;
+  font-size: 100px;
+  font-weight: bold;
+  border: 1px solid tomato;
+  margin: 0 0 15px;
+}
+
+.main__game-main__answer-boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid coral;
+  width: 1000px;
+  height: 1500px;
+}
+
+.main__game-main__answer-boxes__box-0,
+.main__game-main__answer-boxes__box-1,
+.main__game-main__answer-boxes__box-2,
+.main__game-main__answer-boxes__box-3,
+.main__game-main__answer-boxes__box-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__game-main__answer-boxes__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  border: 1px solid gray;
+  font-size: 80px;
+  font-weight: bold;
+  margin: 0 8px 20px 8px;
+}
+
+.main__game-keyboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  height: 700px;
+  border: 1px solid orange;
+}
+
+.main__game-keyboard__row-0,
+.main__game-keyboard__row-1,
+.main__game-keyboard__row-2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px soild green;
+  width: 800px;
+  height: 50px;
+  margin: 40px 0 40px 0;
+}
+
+.main__game-keyboard__key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 40px;
+  background-color: gray;
+  color: white;
+  border-radius: 10%;
+  width: 70px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.main__game-keyboard__key[data-key="ENTER"],
+.main__game-keyboard__key[data-key="Backspace"] {
+  width: 120px;
+  font-size: 25px;
+}
+
+.correct {
+  background-color: lightgreen;
+  color: black;
+}
+
+.include {
+  background-color: yellow;
+  color: black;
+}

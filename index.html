@@ -5,15 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wordle Challenge</title>
     <link rel="stylesheet" href="Assets/CSS/header.css" />
+    <link rel="stylesheet" href="Assets/CSS/main.css" />
+    <link rel="stylesheet" href="Assets/CSS/footer.css" />
+    <script src="JS/timer.js"></script>
+    <script src="JS/typingKeyboard.js"></script>
+    <!-- <script src="JS/clickKeyboard.js"></script> -->
   </head>
   <body>
     <header>
       <div class="header__ad">
         <div class="header__ad__img">Advertise</div>
       </div>
-      <div class="header__navigators"></div>
+      <div class="header__navigators">
+        <div class="header__navigators-index">
+          <img src="Assets/svg/index.svg" alt="" />
+        </div>
+        <div class="header__navigators-etc">
+          <div class="header__navigators-etc__bulb">
+            <img src="Assets/svg/bulb.svg" alt="" />
+          </div>
+          <div class="header__navigators-etc__ranking">
+            <img src="Assets/svg/chart.svg" alt="" />
+          </div>
+          <div class="header__navigators-etc__qna">
+            <img src="Assets/svg/question.svg" alt="" />
+          </div>
+          <div class="header__navigators-etc__setting">
+            <img src="Assets/svg/setting.svg" alt="" />
+          </div>
+          <div class="header__navigators-etc__subcribe">Subcribe to Games</div>
+        </div>
+      </div>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+      <div class="main__game-info">
+        <div class="main__game-info__start-time">시작 시간 : 00:00:00</div>
+        <div class="main__game-info__running-time">경과 시간 : 00:00</div>
+        <div class="main__game-info__chance-time">남은 횟수 : 5회</div>
+      </div>
+      <div class="main__game-main__answer-boxes">
+        <div class="main__game-main__answer-boxes__box-0">
+          <div class="main__game-main__answer-boxes__box" data-index="00"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="01"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="02"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="03"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="04"></div>
+        </div>
+        <div class="main__game-main__answer-boxes__box-1">
+          <div class="main__game-main__answer-boxes__box" data-index="10"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="11"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="12"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="13"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="14"></div>
+        </div>
+        <div class="main__game-main__answer-boxes__box-2">
+          <div class="main__game-main__answer-boxes__box" data-index="20"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="21"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="22"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="23"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="24"></div>
+        </div>
+        <div class="main__game-main__answer-boxes__box-3">
+          <div class="main__game-main__answer-boxes__box" data-index="30"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="31"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="32"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="33"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="34"></div>
+        </div>
+        <div class="main__game-main__answer-boxes__box-4">
+          <div class="main__game-main__answer-boxes__box" data-index="40"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="41"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="42"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="43"></div>
+          <div class="main__game-main__answer-boxes__box" data-index="44"></div>
+        </div>
+      </div>
+      <div class="main__game-keyboard">
+        <div class="main__game-keyboard__row-0">
+          <div class="main__game-keyboard__key" data-key="Q">Q</div>
+          <div class="main__game-keyboard__key" data-key="W">W</div>
+          <div class="main__game-keyboard__key" data-key="E">E</div>
+          <div class="main__game-keyboard__key" data-key="R">R</div>
+          <div class="main__game-keyboard__key" data-key="T">T</div>
+          <div class="main__game-keyboard__key" data-key="Y">Y</div>
+          <div class="main__game-keyboard__key" data-key="U">U</div>
+          <div class="main__game-keyboard__key" data-key="I">I</div>
+          <div class="main__game-keyboard__key" data-key="O">O</div>
+          <div class="main__game-keyboard__key" data-key="P">P</div>
+        </div>
+        <div class="main__game-keyboard__row-1">
+          <div class="main__game-keyboard__key" data-key="A">A</div>
+          <div class="main__game-keyboard__key" data-key="S">S</div>
+          <div class="main__game-keyboard__key" data-key="D">D</div>
+          <div class="main__game-keyboard__key" data-key="F">F</div>
+          <div class="main__game-keyboard__key" data-key="G">G</div>
+          <div class="main__game-keyboard__key" data-key="H">H</div>
+          <div class="main__game-keyboard__key" data-key="J">J</div>
+          <div class="main__game-keyboard__key" data-key="K">K</div>
+          <div class="main__game-keyboard__key" data-key="L">L</div>
+        </div>
+        <div class="main__game-keyboard__row-2">
+          <div class="main__game-keyboard__key" data-key="ENTER">ENTER</div>
+          <div class="main__game-keyboard__key" data-key="Z">Z</div>
+          <div class="main__game-keyboard__key" data-key="X">X</div>
+          <div class="main__game-keyboard__key" data-key="C">C</div>
+          <div class="main__game-keyboard__key" data-key="V">V</div>
+          <div class="main__game-keyboard__key" data-key="B">B</div>
+          <div class="main__game-keyboard__key" data-key="N">N</div>
+          <div class="main__game-keyboard__key" data-key="M">M</div>
+          <div class="main__game-keyboard__key" data-key="Backspace">
+            Backspace
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer><div class="footer__web-info">123123</div></footer>
   </body>
 </html>

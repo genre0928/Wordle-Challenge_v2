@@ -1,17 +1,33 @@
 header {
   width: auto;
   height: 500px;
+  margin: 0 0 10px;
 }
 
+main {
+  width: auto;
+  height: 2600px;
+  border: 1px solid black;
+}
+
+footer {
+  width: auto;
+  height: 100px;
+  border: 1px solid orange;
+}
 .header__ad {
   width: auto;
-  height: 300px;
+  height: 420px;
   border: 1px solid gray;
 }
 
+/* 여기를 flexbox로 묶어서 index/etc를 두 그룹으로 관리해야하는데 누락함 0109 */
 .header__navigators {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: auto;
-  height: 200px;
+  height: 80px;
   border: 1px solid gray;
 }
 
@@ -19,7 +35,42 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 400px;
   font-size: 150px;
   font-weight: bold;
+}
+
+.header__navigators-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 50px;
+}
+
+.header__navigators-index {
+  width: 70px;
+  height: 70px;
+}
+
+.header__navigators-etc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid orange;
+  width: 600px;
+  height: 80px;
+  margin: 0 10px 0 0;
+}
+
+.header__navigators-etc img {
+  width: 70px;
+  height: 70px;
+}
+
+.header__navigators-etc__subcribe {
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 5px 5px 5px;
 }
